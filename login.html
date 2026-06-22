@@ -1,0 +1,206 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Cheats - Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#080808;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.background{
+position:absolute;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top,#1e6fff33,transparent 50%),
+radial-gradient(circle at bottom,#1e6fff22,transparent 50%);
+}
+
+.login-box{
+position:relative;
+width:400px;
+max-width:90%;
+background:#111;
+padding:40px;
+border-radius:20px;
+border:1px solid #1e6fff55;
+box-shadow:0 0 30px #1e6fff22;
+z-index:10;
+}
+
+.logo{
+text-align:center;
+font-size:32px;
+font-weight:700;
+color:#1e6fff;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#888;
+margin-bottom:30px;
+}
+
+.input-group{
+margin-bottom:20px;
+}
+
+.input-group label{
+display:block;
+margin-bottom:8px;
+color:white;
+}
+
+.input-group input{
+width:100%;
+padding:14px;
+background:#0b0b0b;
+border:1px solid #222;
+border-radius:10px;
+outline:none;
+color:white;
+}
+
+.input-group input:focus{
+border-color:#1e6fff;
+}
+
+.login-btn{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#1e6fff;
+color:white;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.login-btn:hover{
+transform:translateY(-2px);
+}
+
+.links{
+margin-top:20px;
+display:flex;
+justify-content:space-between;
+font-size:14px;
+}
+
+.links a{
+color:#1e6fff;
+text-decoration:none;
+}
+
+.register{
+margin-top:20px;
+text-align:center;
+color:#888;
+}
+
+.register a{
+color:#1e6fff;
+text-decoration:none;
+}
+
+.status{
+margin-top:15px;
+text-align:center;
+font-size:14px;
+color:#00ff88;
+display:none;
+}
+
+</style>
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="login-box">
+
+<div class="logo">👑 Royal Cheats</div>
+
+<div class="subtitle">
+Faça login para acessar o painel
+</div>
+
+<form id="loginForm">
+
+<div class="input-group">
+<label>Usuário</label>
+<input type="text" id="user" required>
+</div>
+
+<div class="input-group">
+<label>Senha</label>
+<input type="password" id="pass" required>
+</div>
+
+<button class="login-btn" type="submit">
+Entrar
+</button>
+
+</form>
+
+<div class="status" id="status">
+Login realizado com sucesso!
+</div>
+
+<div class="links">
+<a href="#">Esqueci minha senha</a>
+<a href="#">Suporte</a>
+</div>
+
+<div class="register">
+Não possui conta?
+<a href="#">Registrar</a>
+</div>
+
+</div>
+
+<script>
+
+document
+.getElementById("loginForm")
+.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+document.getElementById("status").style.display="block";
+
+setTimeout(()=>{
+
+window.location.href="dashboard.html";
+
+},1000);
+
+});
+
+</script>
+
+</body>
+</html>
+```
